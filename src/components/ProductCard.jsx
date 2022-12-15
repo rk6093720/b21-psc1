@@ -1,6 +1,6 @@
 import { Heading, Box, Image } from "@chakra-ui/react";
 import { useDispatch } from "react-redux";
-import { addCurrent } from "../Redux/action";
+import { addCurrent } from "../Redux/App/action";
 import { useNavigate } from "react-router-dom";
 
 export const ProductCard = ({ product }) => {

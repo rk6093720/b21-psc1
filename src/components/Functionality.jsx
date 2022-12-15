@@ -1,10 +1,10 @@
 import { Heading, Box, Select } from "@chakra-ui/react";
 import { useSelector, useDispatch } from "react-redux";
-import { filterProduct, sortProducts } from "../Redux/action";
+import { filterProduct, sortProducts } from "../Redux/App/action";
 export const Functionality = () => {
   const dispatch = useDispatch();
-  let products = useSelector((store) => store.products);
-  let filteredData = useSelector((store) => store.filteredData);
+  let products = useSelector((store) => store.App.products);
+  let filteredData = useSelector((store) => store.App.filteredData);
   function handleFilter(e) {
     let filteredData = products.filter((el) => {
       return el.category === e.target.value;

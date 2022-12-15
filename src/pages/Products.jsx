@@ -4,15 +4,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { Functionality } from "../components/Functionality";
 import { Paginataion } from "../components/Pagination";
 import { ProductCard } from "../components/ProductCard";
-import { getProducts } from "../Redux/action";
+import { getProducts } from "../Redux/App/action";
 
 export const Products = () => {
   const dispatch = useDispatch();
-  const products = useSelector((store) => store.products);
-  const filteredData = useSelector((store) => store.filteredData);
+  const products = useSelector((store) => store.App.products);
+  const filteredData = useSelector((store) => store.App.filteredData);
 
   const [page, setPage] = useState(1);
-  const perPage = 8;
+  const perPage = 10;
   const totalPages = Math.ceil(filteredData.length / perPage);
 
   let end = page * perPage;

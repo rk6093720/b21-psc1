@@ -4,8 +4,14 @@ import {
   GET_PRODUCTS,
   SORT_PRODUCT,
 } from "./action";
-
-export const Reducer = (state, { type, payload }) => {
+const initState = {
+  products: [],
+  cart: [],
+  orders: [],
+  currentProduct: {},
+  filteredData: [],
+};
+export const Reducer = (state=initState, { type, payload }) => {
   switch (type) {
     case GET_PRODUCTS:
       return { ...state, products: payload, filteredData: payload };
